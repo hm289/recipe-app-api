@@ -4,7 +4,7 @@ from django.utils.translation import gettext as _
 from core import models
 
 
-class USerAdmin(BaseUserAdmin):
+class UserAdmin(BaseUserAdmin):
     ordering = ['id']
     list_display = ['email', 'name']
     fieldsets = (
@@ -24,4 +24,4 @@ class USerAdmin(BaseUserAdmin):
     )
 
 
-admin.site.register(models.User, USerAdmin)
+admin.site.register(models.User, UserAdmin)
